@@ -1037,7 +1037,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "P051",
+   "rtuName": "P051", "pipeSizeMm": "800",
    "type": "P (Pressure เท่านั้น)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1092,7 +1092,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "P149",
+   "rtuName": "P149", "pipeSizeMm": "700", "flowDirection": "เข้ามหาสวัสดิ์",
    "type": "P (Pressure เท่านั้น)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1114,7 +1114,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "P169",
+   "rtuName": "P169", "pipeSizeMm": "1000", "flowDirection": "เข้าสายไหม",
    "type": "P (Pressure เท่านั้น)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1147,7 +1147,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "P173",
+   "rtuName": "P173", "pipeSizeMm": "1000",
    "type": "P (Pressure เท่านั้น)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1213,7 +1213,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U001",
+   "rtuName": "U001", "pipeSizeMm": "800", "flowDirection": "ออกภาษีเจริญ",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1224,7 +1224,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U002",
+   "rtuName": "U002", "pipeSizeMm": "800", "flowDirection": "เข้าภาษีเจริญ",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1235,7 +1235,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U004",
+   "rtuName": "U004", "pipeSizeMm": "800", "flowDirection": "ออกตากสิน",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1246,7 +1246,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U005",
+   "rtuName": "U005", "pipeSizeMm": "1200", "flowDirection": "เข้าตากสิน",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1257,7 +1257,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U006",
+   "rtuName": "U006", "pipeSizeMm": "1200", "flowDirection": "ออกบางกอกน้อย",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1268,7 +1268,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U014",
+   "rtuName": "U014", "pipeSizeMm": "900", "flowDirection": "เข้าตากสิน",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1279,7 +1279,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U016",
+   "rtuName": "U016", "pipeSizeMm": "1200", "flowDirection": "เข้าภาษีเจริญ",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1290,7 +1290,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U017",
+   "rtuName": "U017", "pipeSizeMm": "1200", "flowDirection": "ออกมหาสวัสดิ์",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1301,7 +1301,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U018",
+   "rtuName": "U018", "pipeSizeMm": "1500", "flowDirection": "เข้าบางกอกน้อย",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1312,7 +1312,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U019",
+   "rtuName": "U019", "pipeSizeMm": "1000", "flowDirection": "เข้าตากสิน",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1323,7 +1323,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U020",
+   "rtuName": "U020", "pipeSizeMm": "1200", "flowDirection": "ออกบางกอกน้อย",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1334,7 +1334,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U022",
+   "rtuName": "U022", "pipeSizeMm": "1800", "flowDirection": "เข้าบางกอกน้อย",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1345,7 +1345,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U023",
+   "rtuName": "U023", "pipeSizeMm": "600", "flowDirection": "ออกมหาสวัสดิ์",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1356,7 +1356,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U024",
+   "rtuName": "U024", "pipeSizeMm": "900", "flowDirection": "เข้าบางกอกน้อย",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1367,7 +1367,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U025",
+   "rtuName": "U025", "pipeSizeMm": "1000", "flowDirection": "ออกภาษีเจริญ",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1378,7 +1378,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U027",
+   "rtuName": "U027", "pipeSizeMm": "1000", "flowDirection": "เข้าภาษีเจริญ",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1389,7 +1389,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U028",
+   "rtuName": "U028", "pipeSizeMm": "1000", "flowDirection": "เข้าตากสิน",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1400,7 +1400,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U029",
+   "rtuName": "U029", "pipeSizeMm": "1200", "flowDirection": "เข้าบางกอกน้อย",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1411,7 +1411,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U030",
+   "rtuName": "U030", "pipeSizeMm": "1000", "flowDirection": "เข้าบางบัวทอง",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1422,7 +1422,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U031",
+   "rtuName": "U031", "pipeSizeMm": "800", "flowDirection": "เข้าตากสิน",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1433,7 +1433,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U032",
+   "rtuName": "U032", "pipeSizeMm": "1000", "flowDirection": "ออกตากสิน",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1444,7 +1444,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U033",
+   "rtuName": "U033", "pipeSizeMm": "1500", "flowDirection": "เข้าสุขสวัสดิ์",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1477,7 +1477,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U101",
+   "rtuName": "U101", "pipeSizeMm": "1000", "flowDirection": "เข้าบางเขน",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1488,7 +1488,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U103",
+   "rtuName": "U103", "pipeSizeMm": "500", "flowDirection": "เข้าบางเขน",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1499,7 +1499,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U105",
+   "rtuName": "U105", "pipeSizeMm": "700", "flowDirection": "ออกประชาชื่น",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1510,7 +1510,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U108",
+   "rtuName": "U108", "pipeSizeMm": "500",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1521,7 +1521,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U109",
+   "rtuName": "U109", "pipeSizeMm": "700", "flowDirection": "เข้าแม้นศรี",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1532,7 +1532,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U110",
+   "rtuName": "U110", "pipeSizeMm": "1500", "flowDirection": "เข้าพญาไท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1543,7 +1543,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U111",
+   "rtuName": "U111", "pipeSizeMm": "600", "flowDirection": "ออกลาดพร้าว",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1554,7 +1554,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U112",
+   "rtuName": "U112", "pipeSizeMm": "400", "flowDirection": "ไปถนนนครไชยศรี",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1565,7 +1565,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U118",
+   "rtuName": "U118", "pipeSizeMm": "1500", "flowDirection": "ออกพญาไท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1576,7 +1576,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U119",
+   "rtuName": "U119", "pipeSizeMm": "900", "flowDirection": "ออกพญาไท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1587,7 +1587,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U120",
+   "rtuName": "U120", "pipeSizeMm": "1000", "flowDirection": "เข้าพญาไท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1598,7 +1598,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U121",
+   "rtuName": "U121", "pipeSizeMm": "1200", "flowDirection": "ออกพญาไท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1609,7 +1609,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U122",
+   "rtuName": "U122", "pipeSizeMm": "600",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1620,7 +1620,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U125",
+   "rtuName": "U125", "pipeSizeMm": "400", "flowDirection": "ออกแม้นศรี",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1631,7 +1631,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U128",
+   "rtuName": "U128", "pipeSizeMm": "600",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1642,7 +1642,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U134",
+   "rtuName": "U134", "pipeSizeMm": "1200",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1653,7 +1653,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U137",
+   "rtuName": "U137", "pipeSizeMm": "1200", "flowDirection": "เข้าพระโขนง",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1664,7 +1664,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U138",
+   "rtuName": "U138", "pipeSizeMm": "1000", "flowDirection": "ออกสุขุมวิท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1675,7 +1675,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U139",
+   "rtuName": "U139", "pipeSizeMm": "600", "flowDirection": "เข้าสรงประภา",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1686,7 +1686,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U140",
+   "rtuName": "U140", "pipeSizeMm": "800",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1697,7 +1697,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U141",
+   "rtuName": "U141", "pipeSizeMm": "600", "flowDirection": "เข้าลาดพร้าว",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1708,7 +1708,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U142",
+   "rtuName": "U142", "pipeSizeMm": "1000", "flowDirection": "เข้าพระโขนง",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1719,7 +1719,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U144",
+   "rtuName": "U144", "pipeSizeMm": "600", "flowDirection": "เข้าพญาไท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1730,7 +1730,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U145",
+   "rtuName": "U145", "pipeSizeMm": "1000", "flowDirection": "เข้าพญาไท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1741,7 +1741,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U148",
+   "rtuName": "U148", "pipeSizeMm": "800", "flowDirection": "เข้าสุขุมวิท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1752,7 +1752,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U151",
+   "rtuName": "U151", "pipeSizeMm": "800", "flowDirection": "เข้าลาดพร้าว",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1774,7 +1774,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U201",
+   "rtuName": "U201", "pipeSizeMm": "1200", "flowDirection": "เข้าทุ่งมหาเมฆ",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1785,7 +1785,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U202",
+   "rtuName": "U202", "pipeSizeMm": "1000", "flowDirection": "ออกแม้นศรี",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1796,7 +1796,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U203",
+   "rtuName": "U203", "pipeSizeMm": "350", "flowDirection": "เข้าแม้นศรี",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1807,7 +1807,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U204",
+   "rtuName": "U204", "pipeSizeMm": "1500", "flowDirection": "เข้าสมุทรปราการ",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1818,7 +1818,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U205",
+   "rtuName": "U205", "pipeSizeMm": "1200", "flowDirection": "เข้าสมุทรปราการ",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1829,7 +1829,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U206",
+   "rtuName": "U206", "pipeSizeMm": "800", "flowDirection": "ออกสมุทรปราการ",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1840,7 +1840,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U207",
+   "rtuName": "U207", "pipeSizeMm": "600", "flowDirection": "เข้าพญาไท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1851,7 +1851,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U208",
+   "rtuName": "U208", "pipeSizeMm": "600", "flowDirection": "เข้าแม้นศรี",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1862,7 +1862,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U209",
+   "rtuName": "U209", "pipeSizeMm": "1000", "flowDirection": "เข้าประชาชื่น",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1873,7 +1873,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U212",
+   "rtuName": "U212", "pipeSizeMm": "1000", "flowDirection": "เข้าประชาชื่น",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1884,7 +1884,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U215",
+   "rtuName": "U215", "pipeSizeMm": "600", "flowDirection": "เข้าประชาชื่น",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1895,7 +1895,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U216",
+   "rtuName": "U216", "pipeSizeMm": "700", "flowDirection": "เข้าประชาชื่น",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1906,7 +1906,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U217",
+   "rtuName": "U217", "pipeSizeMm": "600", "flowDirection": "เข้านนทบุรี",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1917,7 +1917,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U219",
+   "rtuName": "U219", "pipeSizeMm": "600", "flowDirection": "เข้าลาดพร้าว",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1928,7 +1928,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U220",
+   "rtuName": "U220", "pipeSizeMm": "1200", "flowDirection": "เข้าลาดพร้าว",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1939,7 +1939,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U222",
+   "rtuName": "U222", "pipeSizeMm": "800", "flowDirection": "เข้าพระโขนง",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1950,7 +1950,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U223",
+   "rtuName": "U223", "pipeSizeMm": "1500", "flowDirection": "เข้าพระโขนง",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1961,7 +1961,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U226",
+   "rtuName": "U226", "pipeSizeMm": "1000", "flowDirection": "ออกสมุทรปราการ",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1972,7 +1972,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U227",
+   "rtuName": "U227", "pipeSizeMm": "1000", "flowDirection": "ออกพระโขนง",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1983,7 +1983,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U230",
+   "rtuName": "U230", "pipeSizeMm": "1200", "flowDirection": "ออกประชาชื่น",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -1994,7 +1994,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U231",
+   "rtuName": "U231", "pipeSizeMm": "1200", "flowDirection": "ออกประชาชื่น",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2005,7 +2005,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U232",
+   "rtuName": "U232", "pipeSizeMm": "1200", "flowDirection": "เข้านนทบุรี",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2016,7 +2016,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U233",
+   "rtuName": "U233", "pipeSizeMm": "1200", "flowDirection": "เข้านนทบุรี",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2027,7 +2027,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U234",
+   "rtuName": "U234", "pipeSizeMm": "1000", "flowDirection": "เข้าสาขาลาดพร้าว",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2038,7 +2038,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U235",
+   "rtuName": "U235", "pipeSizeMm": "1000", "flowDirection": "เข้าพญาไท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2049,7 +2049,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U236",
+   "rtuName": "U236", "pipeSizeMm": "1000", "flowDirection": "ออกแม้นศรี",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2060,7 +2060,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U237",
+   "rtuName": "U237", "pipeSizeMm": "1000", "flowDirection": "เข้าบางเขน",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2071,7 +2071,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U238",
+   "rtuName": "U238", "pipeSizeMm": "1000", "flowDirection": "ออกลาดพร้าว",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2082,7 +2082,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U239",
+   "rtuName": "U239", "pipeSizeMm": "800", "flowDirection": "เข้าลาดพร้าว",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2093,7 +2093,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U240",
+   "rtuName": "U240", "pipeSizeMm": "1000", "flowDirection": "เข้าพระโขนง",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2104,7 +2104,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U241",
+   "rtuName": "U241", "pipeSizeMm": "1200", "flowDirection": "เข้าสุขุมวิท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2115,7 +2115,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U242",
+   "rtuName": "U242", "pipeSizeMm": "1000", "flowDirection": "เข้าสุขุมวิท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2137,7 +2137,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U245",
+   "rtuName": "U245", "pipeSizeMm": "800", "flowDirection": "ออกมีนบุรี",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2148,7 +2148,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U246",
+   "rtuName": "U246", "pipeSizeMm": "1000", "flowDirection": "ออกสุขุมวิท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2159,7 +2159,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U247",
+   "rtuName": "U247", "pipeSizeMm": "1500", "flowDirection": "ออกลาดพร้าว",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2170,7 +2170,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U248",
+   "rtuName": "U248", "pipeSizeMm": "1000", "flowDirection": "เข้าประชาชื่น",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2181,7 +2181,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U249",
+   "rtuName": "U249", "pipeSizeMm": "800", "flowDirection": "เข้าสมุทรปราการ",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2192,7 +2192,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U250",
+   "rtuName": "U250", "pipeSizeMm": "1000", "flowDirection": "ออกพญาไท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2203,7 +2203,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U251",
+   "rtuName": "U251", "pipeSizeMm": "1200", "flowDirection": "เข้าทุ่งมหาเมฆ",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2214,7 +2214,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U252",
+   "rtuName": "U252", "pipeSizeMm": "800",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2225,7 +2225,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U253",
+   "rtuName": "U253", "pipeSizeMm": "1000", "flowDirection": "ออกนนทบุรี",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2236,7 +2236,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U254",
+   "rtuName": "U254", "pipeSizeMm": "1200",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2247,7 +2247,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U255",
+   "rtuName": "U255", "pipeSizeMm": "800", "flowDirection": "เข้าประชาชื่น",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2258,7 +2258,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U256",
+   "rtuName": "U256", "pipeSizeMm": "1200",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2269,7 +2269,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U259",
+   "rtuName": "U259", "pipeSizeMm": "300", "flowDirection": "ออกสมุทรปราการ",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2280,7 +2280,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U260",
+   "rtuName": "U260", "pipeSizeMm": "800", "flowDirection": "ออกสุขุมวิท",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2291,7 +2291,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "U263",
+   "rtuName": "U263", "pipeSizeMm": "800", "flowDirection": "เข้านนทบุรี",
    "type": "U (Ultra Flow Meter)",
    "branchCode": "",
    "branchName": "ยังไม่มีข้อมูล",
@@ -2302,7 +2302,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0102",
+   "rtuName": "UZ0102", "pipeSizeMm": "800", "flowDirection": "ตู้ไปคลอง",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "01",
    "branchName": "บางกอกน้อย",
@@ -2313,7 +2313,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0105",
+   "rtuName": "UZ0105", "pipeSizeMm": "900", "flowDirection": "ตู้ไปคลอง",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "01",
    "branchName": "บางกอกน้อย",
@@ -2324,7 +2324,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0106",
+   "rtuName": "UZ0106", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "01",
    "branchName": "บางกอกน้อย",
@@ -2335,7 +2335,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0108",
+   "rtuName": "UZ0108", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "01",
    "branchName": "บางกอกน้อย",
@@ -2368,7 +2368,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0201",
+   "rtuName": "UZ0201", "pipeSizeMm": "1200", "flowDirection": "ไปพระราม 2",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "02",
    "branchName": "ตากสิน",
@@ -2379,7 +2379,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0202",
+   "rtuName": "UZ0202", "pipeSizeMm": "700",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "02",
    "branchName": "ตากสิน",
@@ -2390,7 +2390,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0204",
+   "rtuName": "UZ0204", "pipeSizeMm": "1200", "flowDirection": "ออกถนนสุขสวัสดิ์",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "02",
    "branchName": "ตากสิน",
@@ -2401,7 +2401,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0206",
+   "rtuName": "UZ0206", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "02",
    "branchName": "ตากสิน",
@@ -2412,7 +2412,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0207",
+   "rtuName": "UZ0207", "pipeSizeMm": "600",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "02",
    "branchName": "ตากสิน",
@@ -2423,7 +2423,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0208",
+   "rtuName": "UZ0208", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "02",
    "branchName": "ตากสิน",
@@ -2434,7 +2434,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0210",
+   "rtuName": "UZ0210", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "02",
    "branchName": "ตากสิน",
@@ -2445,7 +2445,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0218",
+   "rtuName": "UZ0218", "pipeSizeMm": "1200", "flowDirection": "ออกตากสิน",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "02",
    "branchName": "ตากสิน",
@@ -2456,7 +2456,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0219",
+   "rtuName": "UZ0219", "pipeSizeMm": "800", "flowDirection": "ออกตากสิน",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "02",
    "branchName": "ตากสิน",
@@ -2478,7 +2478,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0301",
+   "rtuName": "UZ0301", "pipeSizeMm": "1000", "flowDirection": "ไปพหลโยธิน",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "03",
    "branchName": "พญาไท",
@@ -2489,7 +2489,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0303",
+   "rtuName": "UZ0303", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "03",
    "branchName": "พญาไท",
@@ -2500,7 +2500,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0307",
+   "rtuName": "UZ0307", "pipeSizeMm": "600",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "03",
    "branchName": "พญาไท",
@@ -2511,7 +2511,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0309",
+   "rtuName": "UZ0309", "pipeSizeMm": "700",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "03",
    "branchName": "พญาไท",
@@ -2522,7 +2522,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0323",
+   "rtuName": "UZ0323", "pipeSizeMm": "600",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "03",
    "branchName": "พญาไท",
@@ -2544,7 +2544,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0507",
+   "rtuName": "UZ0507", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "05",
    "branchName": "ทุ่งมหาเมฆ",
@@ -2555,7 +2555,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0513",
+   "rtuName": "UZ0513", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "05",
    "branchName": "ทุ่งมหาเมฆ",
@@ -2566,7 +2566,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0514",
+   "rtuName": "UZ0514", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "05",
    "branchName": "ทุ่งมหาเมฆ",
@@ -2577,7 +2577,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0601",
+   "rtuName": "UZ0601", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2588,7 +2588,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0602",
+   "rtuName": "UZ0602", "pipeSizeMm": "700",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2599,7 +2599,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0603",
+   "rtuName": "UZ0603", "pipeSizeMm": "800", "flowDirection": "ไปถนนเพชรบุรี",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2610,7 +2610,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0606",
+   "rtuName": "UZ0606", "pipeSizeMm": "700",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2621,7 +2621,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0608",
+   "rtuName": "UZ0608", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2632,7 +2632,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0609",
+   "rtuName": "UZ0609", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2643,7 +2643,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0611",
+   "rtuName": "UZ0611", "pipeSizeMm": "500",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2654,7 +2654,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0613",
+   "rtuName": "UZ0613", "pipeSizeMm": "1200",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2665,7 +2665,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0615",
+   "rtuName": "UZ0615", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2676,7 +2676,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0616",
+   "rtuName": "UZ0616", "pipeSizeMm": "600",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2687,7 +2687,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0617",
+   "rtuName": "UZ0617", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2698,7 +2698,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0619",
+   "rtuName": "UZ0619", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2709,7 +2709,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0620",
+   "rtuName": "UZ0620", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2720,7 +2720,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0622",
+   "rtuName": "UZ0622", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2731,7 +2731,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0624",
+   "rtuName": "UZ0624", "pipeSizeMm": "500",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2742,7 +2742,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ0625",
+   "rtuName": "UZ0625", "pipeSizeMm": "500",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "06",
    "branchName": "แม้นศรี",
@@ -2797,7 +2797,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1204",
+   "rtuName": "UZ1204", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "12",
    "branchName": "ลาดพร้าว",
@@ -2808,7 +2808,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1207",
+   "rtuName": "UZ1207", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "12",
    "branchName": "ลาดพร้าว",
@@ -2819,7 +2819,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1210",
+   "rtuName": "UZ1210", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "12",
    "branchName": "ลาดพร้าว",
@@ -2830,7 +2830,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1213",
+   "rtuName": "UZ1213", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "12",
    "branchName": "ลาดพร้าว",
@@ -2852,7 +2852,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1218",
+   "rtuName": "UZ1218", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "12",
    "branchName": "ลาดพร้าว",
@@ -2896,7 +2896,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1301",
+   "rtuName": "UZ1301", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "13",
    "branchName": "พระโขนง",
@@ -2907,7 +2907,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1302",
+   "rtuName": "UZ1302", "pipeSizeMm": "1200", "flowDirection": "เข้าถนนอุดมสุข",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "13",
    "branchName": "พระโขนง",
@@ -2918,7 +2918,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1303",
+   "rtuName": "UZ1303", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "13",
    "branchName": "พระโขนง",
@@ -2929,7 +2929,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1304",
+   "rtuName": "UZ1304", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "13",
    "branchName": "พระโขนง",
@@ -2940,7 +2940,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1305",
+   "rtuName": "UZ1305", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "13",
    "branchName": "พระโขนง",
@@ -2951,7 +2951,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1307",
+   "rtuName": "UZ1307", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "13",
    "branchName": "พระโขนง",
@@ -2962,7 +2962,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1309",
+   "rtuName": "UZ1309", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "13",
    "branchName": "พระโขนง",
@@ -2973,7 +2973,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1501",
+   "rtuName": "UZ1501", "pipeSizeMm": "700",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "15",
    "branchName": "ประชาชื่น",
@@ -2984,7 +2984,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1502",
+   "rtuName": "UZ1502", "pipeSizeMm": "600",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "15",
    "branchName": "ประชาชื่น",
@@ -2995,7 +2995,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1504",
+   "rtuName": "UZ1504", "pipeSizeMm": "800", "flowDirection": "ไปแยกบางโพ",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "15",
    "branchName": "ประชาชื่น",
@@ -3006,7 +3006,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1505",
+   "rtuName": "UZ1505", "pipeSizeMm": "800", "flowDirection": "ไปสะพานพระราม6",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "15",
    "branchName": "ประชาชื่น",
@@ -3017,7 +3017,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1506",
+   "rtuName": "UZ1506", "pipeSizeMm": "700",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "15",
    "branchName": "ประชาชื่น",
@@ -3028,7 +3028,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1507",
+   "rtuName": "UZ1507", "pipeSizeMm": "700",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "15",
    "branchName": "ประชาชื่น",
@@ -3039,7 +3039,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1603",
+   "rtuName": "UZ1603", "pipeSizeMm": "600",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "16",
    "branchName": "บางเขน",
@@ -3050,7 +3050,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1604",
+   "rtuName": "UZ1604", "pipeSizeMm": "1200",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "16",
    "branchName": "บางเขน",
@@ -3061,7 +3061,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1605",
+   "rtuName": "UZ1605", "pipeSizeMm": "600", "flowDirection": "ไปถนนสายไหม",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "16",
    "branchName": "บางเขน",
@@ -3072,7 +3072,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1607",
+   "rtuName": "UZ1607", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "16",
    "branchName": "บางเขน",
@@ -3083,7 +3083,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1608",
+   "rtuName": "UZ1608", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "16",
    "branchName": "บางเขน",
@@ -3094,7 +3094,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1609",
+   "rtuName": "UZ1609", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "16",
    "branchName": "บางเขน",
@@ -3105,7 +3105,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1702",
+   "rtuName": "UZ1702", "pipeSizeMm": "1200",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "17",
    "branchName": "สมุทรปราการ",
@@ -3116,7 +3116,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1703",
+   "rtuName": "UZ1703", "pipeSizeMm": "600",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "17",
    "branchName": "สมุทรปราการ",
@@ -3127,7 +3127,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1705",
+   "rtuName": "UZ1705", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "17",
    "branchName": "สมุทรปราการ",
@@ -3138,7 +3138,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1706",
+   "rtuName": "UZ1706", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "17",
    "branchName": "สมุทรปราการ",
@@ -3149,7 +3149,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1707",
+   "rtuName": "UZ1707", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "17",
    "branchName": "สมุทรปราการ",
@@ -3160,7 +3160,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1708",
+   "rtuName": "UZ1708", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "17",
    "branchName": "สมุทรปราการ",
@@ -3171,7 +3171,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1709",
+   "rtuName": "UZ1709", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "17",
    "branchName": "สมุทรปราการ",
@@ -3182,7 +3182,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1711",
+   "rtuName": "UZ1711", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "17",
    "branchName": "สมุทรปราการ",
@@ -3193,7 +3193,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1712",
+   "rtuName": "UZ1712", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "17",
    "branchName": "สมุทรปราการ",
@@ -3204,7 +3204,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ1716",
+   "rtuName": "UZ1716", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "17",
    "branchName": "สมุทรปราการ",
@@ -3237,7 +3237,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5301",
+   "rtuName": "UZ5301", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "53",
    "branchName": "มีนบุรี",
@@ -3248,7 +3248,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5303",
+   "rtuName": "UZ5303", "pipeSizeMm": "1000", "flowDirection": "เข้าถนนสุวินทวงศ์",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "53",
    "branchName": "มีนบุรี",
@@ -3259,7 +3259,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5304",
+   "rtuName": "UZ5304", "pipeSizeMm": "1500",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "53",
    "branchName": "มีนบุรี",
@@ -3270,7 +3270,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5306",
+   "rtuName": "UZ5306", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "53",
    "branchName": "มีนบุรี",
@@ -3281,7 +3281,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5307",
+   "rtuName": "UZ5307", "pipeSizeMm": "1000", "flowDirection": "เข้าถนนฉลองกรุง",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "53",
    "branchName": "มีนบุรี",
@@ -3292,7 +3292,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5308",
+   "rtuName": "UZ5308", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "53",
    "branchName": "มีนบุรี",
@@ -3303,7 +3303,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5309",
+   "rtuName": "UZ5309", "pipeSizeMm": "1000", "flowDirection": "เข้าสุวรรณภูมิ",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "53",
    "branchName": "มีนบุรี",
@@ -3314,7 +3314,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5310",
+   "rtuName": "UZ5310", "pipeSizeMm": "1000", "flowDirection": "ออกลาดกระบัง",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "53",
    "branchName": "มีนบุรี",
@@ -3325,7 +3325,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5407",
+   "rtuName": "UZ5407", "pipeSizeMm": "1000", "flowDirection": "ไปรัตนาธิเบศร์",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "54",
    "branchName": "บางบัวทอง",
@@ -3336,7 +3336,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5408",
+   "rtuName": "UZ5408", "pipeSizeMm": "1000", "flowDirection": "ไปอำเภอไทรน้อย",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "54",
    "branchName": "บางบัวทอง",
@@ -3347,7 +3347,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5410",
+   "rtuName": "UZ5410", "pipeSizeMm": "600", "flowDirection": "ออกจากสี่แยก",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "54",
    "branchName": "บางบัวทอง",
@@ -3358,7 +3358,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5411",
+   "rtuName": "UZ5411", "pipeSizeMm": "1500", "flowDirection": "ไปแยกไทรน้อย",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "54",
    "branchName": "บางบัวทอง",
@@ -3369,7 +3369,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5412",
+   "rtuName": "UZ5412", "pipeSizeMm": "1200", "flowDirection": "เข้าถนนบางไผ่",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "54",
    "branchName": "บางบัวทอง",
@@ -3380,7 +3380,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5413",
+   "rtuName": "UZ5413", "pipeSizeMm": "800", "flowDirection": "เข้าถนนบ้านกล้วย",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "54",
    "branchName": "บางบัวทอง",
@@ -3391,7 +3391,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5414",
+   "rtuName": "UZ5414", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "54",
    "branchName": "บางบัวทอง",
@@ -3402,7 +3402,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5415",
+   "rtuName": "UZ5415", "pipeSizeMm": "1200",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "54",
    "branchName": "บางบัวทอง",
@@ -3413,7 +3413,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5501",
+   "rtuName": "UZ5501", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "55",
    "branchName": "รอยืนยันชื่อสาขา",
@@ -3424,7 +3424,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5502",
+   "rtuName": "UZ5502", "pipeSizeMm": "1000", "flowDirection": "เข้าสุวรรณภูมิ",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "55",
    "branchName": "รอยืนยันชื่อสาขา",
@@ -3435,7 +3435,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5503",
+   "rtuName": "UZ5503", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "55",
    "branchName": "รอยืนยันชื่อสาขา",
@@ -3468,7 +3468,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5507",
+   "rtuName": "UZ5507", "pipeSizeMm": "1000", "flowDirection": "เข้าสุวรรณภูมิ",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "55",
    "branchName": "รอยืนยันชื่อสาขา",
@@ -3479,7 +3479,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5508",
+   "rtuName": "UZ5508", "pipeSizeMm": "800",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "55",
    "branchName": "รอยืนยันชื่อสาขา",
@@ -3512,7 +3512,7 @@
    "alarm": "ยังไม่มีข้อมูล"
   },
   {
-   "rtuName": "UZ5601",
+   "rtuName": "UZ5601", "pipeSizeMm": "1000",
    "type": "UZ (Flow + Pressure)",
    "branchCode": "56",
    "branchName": "รอยืนยันชื่อสาขา",
