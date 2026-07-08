@@ -285,6 +285,18 @@
     .pane.active { animation: fadein .18s ease-out; }
     @keyframes fadein { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: none; } }
   }
+
+  /* ---------- interactivity enhancements ---------- */
+  .card { transition: box-shadow .16s ease, transform .16s ease; }
+  .grid.kpis .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  svg [data-tip] { transition: filter .12s ease; }
+  svg [data-tip]:hover { filter: brightness(1.15); }
+  table thead th { cursor: pointer; user-select: none; white-space: nowrap; }
+  table thead th:hover { color: var(--accent-deep); }
+  table thead th.sorted::after { content: " ▲"; font-size: 9px; color: var(--accent-deep); }
+  table thead th.sorted[data-sort="desc"]::after { content: " ▼"; }
+  #theme-btn { cursor: pointer; }
+  #theme-btn:hover { border-color: var(--accent); color: var(--accent-deep); }
 </style>
 
 <div class="app">
@@ -307,6 +319,7 @@
       <span class="pill"><span class="dot"></span>Master Data v<span id="h-ver"></span></span>
       <span class="pill mono">SCADA Snapshot: 3 ก.ค. 2026 · 14:05</span>
       <span class="pill sample" title="กราฟรายชั่วโมงเป็นข้อมูลตัวอย่างเพื่อสาธิตรูปแบบ">บางส่วนใช้ Sample Data</span>
+      <button class="pill" id="theme-btn" type="button" title="สลับโหมดสว่าง/มืด" style="margin-left:auto">🌙 มืด</button>
     </div>
     <div id="panes"></div>
   </main>
@@ -360,10 +373,13 @@ window.TS = {"meta": {"source": "Water_Level_3rd5th_month.xlsx (ผู้ใช�
   panesEl.innerHTML = MENUS.map(m => `<section class="pane" id="pane-${m.id}" aria-label="${m.t}"></section>`).join("");
 
   function show(id) {
+    if (!MENUS.some(m => m.id === id)) id = "overview";
     document.querySelectorAll(".nav-btn").forEach(b => b.classList.toggle("active", b.dataset.pane === id));
     document.querySelectorAll(".pane").forEach(p => p.classList.toggle("active", p.id === "pane-" + id));
     $("#pane-title").textContent = MENUS.find(m => m.id === id).t;
+    if (location.hash !== "#" + id) { try { history.replaceState(null, "", "#" + id); } catch (err) {} }
   }
+  window.addEventListener("hashchange", () => show(location.hash.slice(1)));
   navEl.addEventListener("click", e => {
     const b = e.target.closest(".nav-btn");
     if (b) show(b.dataset.pane);
@@ -372,6 +388,62 @@ window.TS = {"meta": {"source": "Water_Level_3rd5th_month.xlsx (ผู้ใช�
   $("#h-ver").textContent = M.dataVersion;
   $("#f-ver").textContent = M.dataVersion;
   $("#f-km").textContent = M.knowledgeBase.length;
+
+  /* ---------- theme toggle (light/dark) ---------- */
+  (function theme() {
+    const KEY = "wkm-theme", btn = $("#theme-btn"), rootEl = document.documentElement;
+    const isDark = () => rootEl.getAttribute("data-theme")
+      ? rootEl.getAttribute("data-theme") === "dark"
+      : matchMedia("(prefers-color-scheme: dark)").matches;
+    const apply = t => {
+      if (t) rootEl.setAttribute("data-theme", t); else rootEl.removeAttribute("data-theme");
+      btn.textContent = isDark() ? "☀️ สว่าง" : "🌙 มืด";
+    };
+    let saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (err) {}
+    apply(saved);
+    btn.addEventListener("click", () => {
+      const next = isDark() ? "light" : "dark";
+      try { localStorage.setItem(KEY, next); } catch (err) {}
+      apply(next);
+    });
+  })();
+
+  /* ---------- keyboard shortcuts: 1-8 switch panes ---------- */
+  document.addEventListener("keydown", e => {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    const a = document.activeElement;
+    if (a && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)) return;
+    const n = parseInt(e.key, 10);
+    if (n >= 1 && n <= MENUS.length) show(MENUS[n - 1].id);
+  });
+
+  /* ---------- sortable tables: click a column header ---------- */
+  document.addEventListener("click", e => {
+    const th = e.target.closest("thead th"); if (!th) return;
+    const table = th.closest("table"); if (!table || !table.tBodies.length) return;
+    const tb = table.tBodies[0];
+    if (tb.rows.length < 2) return;
+    const idx = Array.prototype.indexOf.call(th.parentNode.children, th);
+    const dir = th.dataset.sort === "asc" ? -1 : 1;
+    table.querySelectorAll("thead th").forEach(h => { delete h.dataset.sort; h.classList.remove("sorted"); });
+    th.dataset.sort = dir === 1 ? "asc" : "desc";
+    th.classList.add("sorted");
+    const val = tr => { const c = tr.cells[idx]; return c ? c.textContent.trim() : ""; };
+    const num = s => parseFloat(String(s).replace(/,/g, "").replace(/[^0-9.\-]/g, ""));
+    const rows = Array.from(tb.rows);
+    const hasNum = rows.some(r => isFinite(num(val(r))));
+    rows.sort((a, b) => {
+      const va = val(a), vb = val(b);
+      if (hasNum) {
+        const na = num(va), nb = num(vb);
+        if (isFinite(na) || isFinite(nb))
+          return ((isFinite(na) ? na : -Infinity) - (isFinite(nb) ? nb : -Infinity)) * dir;
+      }
+      return va.localeCompare(vb, "th") * dir;
+    });
+    rows.forEach(r => tb.appendChild(r));
+  });
 
   /* ---------- shared tooltip ---------- */
   const tip = $("#tooltip");
@@ -847,15 +919,34 @@ window.TS = {"meta": {"source": "Water_Level_3rd5th_month.xlsx (ผู้ใช�
              <path d="${d} L${X(s.pts[s.pts.length - 1][0])} ${Y(y0 + pad)} L${X(s.pts[0][0])} ${Y(y0 + pad)} Z" fill="${s.col}" opacity="0.12" stroke="none"/>`
           : `<path d="${d}" fill="none" stroke="${s.col}" stroke-width="${s.w || 2}"/>`;
       }).join("");
+      const dotEls = series.map(s =>
+        `<circle r="3.5" fill="${s.col}" stroke="var(--surface)" stroke-width="1.5"/>`).join("");
       el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" style="width:100%">${g}${paths}
+        <g class="xh" style="display:none;pointer-events:none"><line y1="${PY}" y2="${PY + ih}" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>${dotEls}</g>
         <rect class="hitbox" x="${PX}" y="${PY}" width="${iw}" height="${ih}" fill="transparent"/></svg>`;
       const svg = el.firstElementChild, hit = svg.querySelector(".hitbox");
+      const xh = svg.querySelector(".xh"), xline = xh.querySelector("line"), dots = xh.querySelectorAll("circle");
       hit.addEventListener("mousemove", e => {
         const r = svg.getBoundingClientRect();
         const fx = Math.max(0, Math.min(opts.xmax, ((e.clientX - r.left) * (W / r.width) - PX) / iw * opts.xmax));
+        xh.style.display = "";
+        series.forEach((s, i) => {
+          let best = null, bd = Infinity;
+          s.pts.forEach(pt => {
+            if (pt[1] == null) return;
+            const d = Math.abs(pt[0] - fx);
+            if (d < bd) { bd = d; best = pt; }
+          });
+          if (best) {
+            dots[i].setAttribute("cx", X(best[0]).toFixed(1));
+            dots[i].setAttribute("cy", Y(best[1]).toFixed(1));
+            dots[i].style.display = "";
+            if (i === 0) { xline.setAttribute("x1", X(best[0]).toFixed(1)); xline.setAttribute("x2", X(best[0]).toFixed(1)); }
+          } else dots[i].style.display = "none";
+        });
         tipShow(opts.tip(fx), e.clientX, e.clientY);
       });
-      hit.addEventListener("mouseleave", tipHide);
+      hit.addEventListener("mouseleave", () => { xh.style.display = "none"; tipHide(); });
     }
 
     function render(code) {
@@ -1289,7 +1380,7 @@ window.TS = {"meta": {"source": "Water_Level_3rd5th_month.xlsx (ผู้ใช�
     else if (!e.target.closest("#curve-hit")) tipHide();
   });
 
-  show("overview");
+  show(location.hash.slice(1) || "overview");
 })();
 </script>
 
