@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>นำเสนอ · Water Operation KM Dashboard</title>
+<style>
+  :root{
+    --bg:#0d1b2a; --card:#ffffff; --ink:#10222e; --ink2:#46596a; --muted:#7789;
+    --accent:#2a78d6; --accent2:#1c5cab; --teal:#1baf7a; --amber:#eda100; --crit:#ce3737;
+    --soft:#e3eefb; --line:#d3dde4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:"Segoe UI","Noto Sans Thai","Leelawadee UI","Sarabun",Thonburi,sans-serif;
+    background:#0a1420; color:var(--ink); overflow:hidden;
+  }
+  .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
+  .slide{
+    position:absolute; width:min(96vw,1180px); aspect-ratio:16/9; background:var(--card);
+    border-radius:16px; box-shadow:0 30px 80px rgba(0,0,0,.55); overflow:hidden;
+    padding:56px 64px; display:none; flex-direction:column;
+  }
+  .slide.on{display:flex; animation:fade .35s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .kicker{font-size:15px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+  h1{font-size:52px;line-height:1.1;letter-spacing:-.5px}
+  h2{font-size:38px;line-height:1.15;margin-bottom:6px}
+  .sub{font-size:19px;color:var(--ink2);margin-top:10px;line-height:1.5}
+  ul{list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:14px}
+  li{font-size:20px;line-height:1.45;padding-left:34px;position:relative;color:#1b3040}
+  li::before{content:"";position:absolute;left:0;top:9px;width:16px;height:16px;border-radius:5px;background:var(--accent)}
+  li.t::before{background:var(--teal)} li.a::before{background:var(--amber)} li.c::before{background:var(--crit)}
+  li b{color:var(--accent2)}
+  .grid{display:grid;gap:16px;margin-top:24px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g2{grid-template-columns:1fr 1fr} .g4{grid-template-columns:repeat(4,1fr)}
+  .tile{background:#f2f7fc;border:1px solid #dbe7f4;border-left:5px solid var(--accent);border-radius:12px;padding:18px 20px}
+  .tile.t{border-left-color:var(--teal)} .tile.a{border-left-color:var(--amber)} .tile.c{border-left-color:var(--crit)}
+  .tile h3{font-size:19px;margin-bottom:4px;color:#12303f}
+  .tile p{font-size:15px;color:var(--ink2);line-height:1.4}
+  .stat{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap}
+  .stat .n{font-size:44px;font-weight:800;color:var(--accent2);line-height:1}
+  .stat .l{font-size:15px;color:var(--muted);margin-top:4px}
+  .flow{display:flex;align-items:center;gap:12px;margin-top:30px;flex-wrap:wrap}
+  .flow .node{background:var(--soft);border:1px solid #bcd6f5;border-radius:12px;padding:14px 18px;text-align:center;min-width:120px}
+  .flow .node .big{font-size:22px;font-weight:800;color:var(--accent2)}
+  .flow .node .cap{font-size:13px;color:var(--ink2);margin-top:2px}
+  .flow .arw{font-size:26px;color:var(--accent);font-weight:800}
+  .foot{position:absolute;left:64px;right:64px;bottom:26px;display:flex;justify-content:space-between;align-items:center;
+    font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+  .cover{background:linear-gradient(135deg,#123a63,#0d1b2a 60%,#0a2e4a);color:#eaf3fb;align-items:flex-start;justify-content:center}
+  .cover h1{color:#fff;font-size:58px}
+  .cover .kicker{color:#7fc4ff}
+  .cover .sub{color:#bcd6ea;font-size:22px}
+  .cover .wave{font-size:40px;color:#4aa8ff}
+  .cover .foot{color:#6f93b3;border-color:#26445f}
+  .badge{display:inline-block;background:var(--soft);color:var(--accent2);border-radius:999px;padding:4px 14px;font-size:14px;font-weight:700;margin-right:8px}
+  .live{display:inline-flex;align-items:center;gap:6px;color:var(--teal);font-weight:800;font-size:15px}
+  .live::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(27,175,122,.2)}
+  /* presenter notes */
+  #note{position:fixed;left:0;right:0;bottom:0;max-height:42vh;overflow:auto;background:#0f2233;color:#dbe8f2;
+    padding:18px 26px;font-size:16px;line-height:1.6;border-top:3px solid var(--accent);display:none;z-index:20}
+  #note.on{display:block}
+  #note h4{color:#7fc4ff;font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+  /* controls */
+  #hud{position:fixed;top:14px;right:18px;display:flex;gap:8px;z-index:30}
+  #hud button, .cbtn{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.25);
+    border-radius:8px;padding:7px 12px;font:inherit;font-size:13px;cursor:pointer}
+  #hud button:hover{background:rgba(255,255,255,.28)}
+  #count{position:fixed;bottom:16px;left:18px;color:#9fb6c8;font-size:14px;z-index:30;font-variant-numeric:tabular-nums}
+  #nav{position:fixed;bottom:14px;right:18px;display:flex;gap:8px;z-index:30}
+  .hint{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);color:#6f8ba0;font-size:12.5px;z-index:10}
+  @media print{
+    body{overflow:visible;background:#fff}
+    .stage{position:static;display:block}
+    .slide{display:flex!important;position:relative;width:100%;aspect-ratio:auto;min-height:96vh;
+      box-shadow:none;border-radius:0;page-break-after:always;border-bottom:1px solid #ccc}
+    #hud,#count,#nav,.hint,#note{display:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+
+  <!-- 1 -->
+  <section class="slide cover on">
+    <div class="kicker">การประปานครหลวง · กองควบคุมระบบส่งและสูบจ่ายน้ำ (กคจ.)</div>
+    <div class="wave">≋</div>
+    <h1>Water Operation<br>KM Dashboard</h1>
+    <p class="sub">ระบบจัดการองค์ความรู้และเฝ้าระวังงานสูบส่ง–สูบจ่ายน้ำ<br>รวมข้อมูล SCADA · RTU · แผนผังระบบ · การรับส่งเวร ไว้ในที่เดียว</p>
+    <div class="foot"><span>นำเสนอผู้บริหาร กปน./กคจ.</span><span>tigerswp818-star.github.io/water-km-dashboard</span></div>
+    <div class="note" data-note="สวัสดีครับ/ค่ะ ท่านผู้บริหารและผู้มีเกียรติทุกท่าน วันนี้ขอนำเสนอ 'Water Operation KM Dashboard' ระบบที่รวบรวมองค์ความรู้และข้อมูลการเดินระบบสูบส่ง–สูบจ่ายน้ำของ กคจ. ไว้ในเว็บเดียว เข้าถึงได้จากทุกอุปกรณ์ ทั้งคอมพิวเตอร์และมือถือ โดยไม่ต้องติดตั้งโปรแกรม เป้าหมายคือทำให้ความรู้ที่เคยกระจัดกระจาย และข้อมูลการเดินระบบแบบเรียลไทม์ มาอยู่รวมกันในจอเดียว ใช้ได้จริงทั้งการบริหารและการปฏิบัติงานหน้างานครับ"></div>
+  </section>
+
+  <!-- 2 -->
+  <section class="slide">
+    <div class="kicker">ที่มาและปัญหา</div>
+    <h2>ทำไมต้องมีระบบนี้</h2>
+    <ul>
+      <li class="c">องค์ความรู้การเดินระบบ <b>กระจัดกระจาย</b> — อยู่ในตัวบุคคล เอกสาร และไฟล์หลายที่ เสี่ยงสูญหายเมื่อเปลี่ยนกำลังพล</li>
+      <li class="a">ข้อมูล SCADA · แผนผังระบบ · ทะเบียน RTU · ข้อมูลสถานี <b>อยู่คนละระบบ</b> เปิดดูข้ามกันยาก</li>
+      <li>การ <b>รับส่งเวร</b> ยังใช้กระดาษ/บันทึกแยกกัน ผู้บริหารเห็นภาพรวมสดไม่ได้</li>
+      <li class="t">ต้องการจอเดียวที่ <b>รวมทุกอย่าง + เห็นค่าสด + พร้อมส่งต่อความรู้</b> ให้คนรุ่นถัดไป</li>
+    </ul>
+    <div class="foot"><span>Water Operation KM Dashboard</span><span>2 / 13</span></div>
+    <div class="note" data-note="จุดเริ่มต้นของระบบนี้มาจากปัญหาจริง 4 ข้อครับ หนึ่ง องค์ความรู้การเดินระบบส่วนใหญ่อยู่ในตัวเจ้าหน้าที่อาวุโส เมื่อเกษียณหรือย้าย ความรู้ก็หายไปด้วย สอง ข้อมูลสำคัญอย่างจอ SCADA แผนผังท่อ ทะเบียน RTU และข้อมูลสถานี อยู่คนละระบบ ต้องเปิดหลายจอ สาม การรับส่งเวรยังใช้กระดาษ ผู้บริหารไม่เห็นสถานะสดของทุกสถานีพร้อมกัน และสี่ เราจึงอยากได้จอเดียวที่รวมทุกอย่าง เห็นค่าปัจจุบัน และเก็บความรู้ส่งต่อได้ ระบบนี้ตอบโจทย์ทั้งสี่ข้อครับ"></div>
+  </section>
+
+  <!-- 3 -->
+  <section class="slide">
+    <div class="kicker">ภาพรวมระบบน้ำ</div>
+    <h2>ผลิต → ส่ง → จ่าย ในหน้าเดียว</h2>
+    <div class="flow">
+      <div class="node"><div class="big">4 โรง</div><div class="cap">โรงผลิตน้ำ<br>BK · MH · SS · TB</div></div>
+      <span class="arw">→</span>
+      <div class="node"><div class="big">4 เส้น</div><div class="cap">อุโมงค์ส่งน้ำ<br>MH · TR1–TR3</div></div>
+      <span class="arw">→</span>
+      <div class="node"><div class="big">10 สถานี</div><div class="cap">สถานีสูบจ่าย<br>SR KT BP LK MB LP LA TP RB PK</div></div>
+      <span class="arw">→</span>
+      <div class="node"><div class="big">DMA</div><div class="cap">พื้นที่จ่ายน้ำ<br>~1,000 ผู้ใช้/โซน</div></div>
+    </div>
+    <div class="stat">
+      <div><div class="n">6.32</div><div class="l">กำลังผลิตรวม (ล้าน ลบ.ม./วัน)</div></div>
+      <div><div class="n">~5</div><div class="l">ความต้องการใช้จริง/วัน</div></div>
+      <div><div class="n">236</div><div class="l">จุดวัด RTU ในระบบ</div></div>
+      <div><div class="n">42+</div><div class="l">องค์ความรู้ในคลัง</div></div>
+    </div>
+    <div class="foot"><span>Water Operation KM Dashboard</span><span>3 / 13</span></div>
+    <div class="note" data-note="สไลด์นี้คือภาพใหญ่ของระบบน้ำที่ระบบเราครอบคลุมครับ เริ่มจากโรงผลิตน้ำ 4 แห่ง กำลังผลิตรวม 6.32 ล้านลูกบาศก์เมตรต่อวัน ส่งผ่านอุโมงค์ส่งน้ำ 4 เส้น เข้าสู่สถานีสูบจ่าย 10 แห่งทั่วกรุงเทพและปริมณฑล แล้วกระจายสู่พื้นที่จ่ายน้ำระดับ DMA ความต้องการใช้จริงประมาณ 5 ล้านลูกบาศก์เมตรต่อวัน มีจุดวัด RTU 236 จุดคอยเฝ้าระบบ ทั้งหมดนี้ผู้ใช้เห็นได้ในหน้า Overview หน้าเดียวครับ"></div>
+  </section>
+
+  <!-- 4 -->
+  <section class="slide">
+    <div class="kicker">โครงสร้างระบบ</div>
+    <h2>7 โมดูลในเว็บเดียว</h2>
+    <div class="grid g3">
+      <div class="tile"><h3>1 · Overview</h3><p>ภาพรวมผลิต–ส่ง–จ่าย ระดับถัง เส้นทางจ่ายน้ำ อิทธิพลสูบจ่ายรายสาขา</p></div>
+      <div class="tile t"><h3>2 · System Map</h3><p>จอ Smart Tunnel เหมือนจอจริง ค่าสดเรียลไทม์</p></div>
+      <div class="tile"><h3>3 · Main Transmission</h3><p>อุโมงค์ส่งน้ำ 4 ระบบ Flow/Pressure และสถานีที่รับน้ำ</p></div>
+      <div class="tile"><h3>4 · Pumping Stations</h3><p>10 สถานี ระดับถัง/รับเข้า/จ่ายออกสด + พื้นที่จ่าย + RTU</p></div>
+      <div class="tile a"><h3>5 · RTU Monitoring</h3><p>ทะเบียน 236 จุด + สถานะ Alarm รายตัวแบบสด</p></div>
+      <div class="tile c"><h3>6 · Shift Handover</h3><p>รับส่งเวรดิจิทัล บอร์ดผู้บริหารสด + พิมพ์ใบเวร</p></div>
+    </div>
+    <p class="sub" style="margin-top:16px">➕ <b>KM Library</b> คลังองค์ความรู้ค้นหา/เพิ่มได้เอง &nbsp;·&nbsp; ทุกโมดูลเชื่อมโยงถึงกัน คลิกข้ามหน้าได้</p>
+    <div class="foot"><span>Water Operation KM Dashboard</span><span>4 / 13</span></div>
+    <div class="note" data-note="ระบบแบ่งเป็น 7 โมดูลหลักครับ Overview ให้ภาพรวมทั้งระบบ System Map คือจอ Smart Tunnel แบบเรียลไทม์ Main Transmission ดูอุโมงค์ส่งน้ำ Pumping Stations ดู 10 สถานีละเอียด RTU Monitoring เฝ้าจุดวัด 236 จุด Shift Handover สำหรับรับส่งเวร และ KM Library เป็นคลังความรู้ ทุกโมดูลเชื่อมกัน เช่น กดรหัส RTU ในหน้าสถานี ก็กระโดดไปค้นในหน้า RTU ได้ทันที ผมจะเจาะให้ดูทีละจุดเด่นครับ"></div>
+  </section>
+
+  <!-- 5 -->
+  <section class="slide">
+    <div class="kicker">จุดเด่น 1 · เห็นค่าปัจจุบัน</div>
+    <h2>Overview & Pumping Stations — ค่าสด</h2>
+    <div class="grid g2">
+      <div class="tile"><h3>ระดับถังเก็บน้ำใส 10 สถานี</h3><p>ระดับน้ำ · % ความจุ · รับเข้า Qin · จ่ายออก — อัปเดตทุก 30 วินาที เห็นสมดุลน้ำทั้งระบบในตาราง</p></div>
+      <div class="tile t"><h3>รายสถานีเชิงลึก</h3><p>ระดับถัง แรงดันขาเข้า อัตราจ่าย + พื้นที่จ่ายน้ำ + RTU เฝ้าวัดในโซน + จุดหลักประจำสถานี</p></div>
+    </div>
+    <p class="sub" style="margin-top:22px"><span class="live">ค่าสด</span> เมื่อเปิดจากในเครือข่าย MWA · <span class="badge">Snapshot</span> เมื่ออยู่นอกเครือข่าย — มีป้ายบอกสถานะชัดเจนบนหน้า</p>
+    <div class="foot"><span>Water Operation KM Dashboard</span><span>5 / 13</span></div>
+    <div class="note" data-note="จุดเด่นแรกคือการเห็นค่าปัจจุบันครับ ในหน้า Overview ตารางระดับถังของทั้ง 10 สถานีจะอัปเดตค่าจริงจาก SCADA ทุก 30 วินาที ทั้งระดับน้ำ เปอร์เซ็นต์ความจุ น้ำรับเข้า และน้ำจ่ายออก ทำให้เห็นสมดุลน้ำทั้งระบบได้ในพริบตา ส่วนหน้า Pumping Stations ลงลึกรายสถานี มีทั้งแรงดัน อัตราจ่าย พื้นที่จ่ายน้ำที่รับผิดชอบ และ RTU ที่เฝ้าในโซนนั้น จุดสำคัญคือระบบจะบอกชัดเจนว่าตอนนี้เป็น 'ค่าสด' หรือ 'Snapshot' ไม่ทำให้เข้าใจผิดครับ"></div>
+  </section>
+
+  <!-- 6 -->
+  <section class="slide">
+    <div class="kicker">จุดเด่น 2 · เหมือนจอจริง</div>
+    <h2>System Map — Smart Tunnel เรียลไทม์</h2>
+    <ul>
+      <li class="t">เลย์เอาต์ <b>เหมือนหน้าจอ tunnel.php ของ กคจ. แบบเป๊ะ</b> — ผังอุโมงค์ ระดับถัง ปั๊ม แรงดัน วาล์ว RCV</li>
+      <li>ดึงค่าสดทุก <b>5 วินาที</b> (สถานี/บางเขน) และ 10 วินาที (สามเสน/ธนบุรี/RCV) ตรงกับจอห้องควบคุม</li>
+      <li>ปั๊มที่เดินขึ้นสีแดง ระดับถังขยับตามจริง ทิศทางการไหลข้ามแม่น้ำคำนวณสด</li>
+      <li class="a">เปิดดูจากที่ไหนก็ได้ในเครือข่าย MWA — ไม่ต้องนั่งหน้าจอห้องควบคุม</li>
+    </ul>
+    <div class="foot"><span>Water Operation KM Dashboard</span><span>6 / 13</span></div>
+    <div class="note" data-note="จุดเด่นที่สองคือหน้า System Map ครับ เราจำลองหน้าจอ Smart Tunnel หรือ tunnel.php ที่ใช้ในห้องควบคุม มาไว้ในเว็บแบบเหมือนจริง ทั้งผังอุโมงค์ ระดับถัง สถานะปั๊ม แรงดัน และวาล์ว RCV โดยดึงค่าสดจากเซิร์ฟเวอร์เดียวกับจอจริง อัปเดตทุก 5 วินาที ปั๊มที่เดินจะขึ้นสีแดง ระดับน้ำในถังขยับตามจริง ประโยชน์คือผู้บริหารหรือเจ้าหน้าที่เปิดดูสถานะระบบได้จากที่ใดก็ได้ในเครือข่าย ไม่จำเป็นต้องอยู่หน้าจอห้องควบคุมครับ"></div>
+  </section>
+
+  <!-- 7 -->
+  <section class="slide">
+    <div class="kicker">จุดเด่น 3 · เฝ้าระวัง</div>
+    <h2>RTU Monitoring — 236 จุด + Alarm สด</h2>
+    <div class="grid g2">
+      <div class="tile a"><h3>สถานะ Alarm รายตัว</h3><p>ดึงสดจาก SCADA — <b style="color:var(--teal)">● ปกติ</b> · <b style="color:var(--crit)">● Alarm</b> · <b style="color:#b06fe6">● หลุดเทรนด์</b> พร้อมสรุปนับรวม</p></div>
+      <div class="tile"><h3>ค้นหา/กรองครบ</h3><p>ตามรหัส · สาขา · ประเภท (P/U/UZ) · สถานะ + ขนาดท่อ และทิศทางการไหลจากทะเบียนจริง</p></div>
+    </div>
+    <p class="sub" style="margin-top:22px">ตัวถอดรหัสชื่อ RTU · เส้นทางข้อมูล DNP3 → OPC → SCADA · ทะเบียนวาล์วควบคุมระยะไกล (RCV)</p>
+    <div class="foot"><span>Water Operation KM Dashboard</span><span>7 / 13</span></div>
+    <div class="note" data-note="จุดเด่นที่สามคือการเฝ้าระวัง RTU ครับ หน้านี้มีทะเบียนจุดวัดจริง 236 จุด และที่เพิ่มเข้ามาคือสถานะ Alarm รายตัวแบบสด ดึงจากระบบเดียวกับห้องควบคุม แสดงเป็นสีเขียวปกติ แดง Alarm หรือม่วงเมื่อค่าหลุดจากแนวโน้ม พร้อมสรุปนับรวมว่าตอนนี้มีกี่จุดผิดปกติ ค้นหาและกรองได้ครบทั้งตามรหัส สาขา ประเภท และสถานะ นอกจากนี้ยังมีขนาดท่อและทิศทางการไหลจากทะเบียนจริง ช่วยให้ทีมปฏิบัติการโฟกัสจุดที่ต้องดูแลได้เร็วขึ้นครับ"></div>
+  </section>
+
+  <!-- 8 -->
+  <section class="slide">
+    <div class="kicker">จุดเด่น 4 · ใช้ได้ทุกกะ</div>
+    <h2>Shift Handover — รับส่งเวรดิจิทัล</h2>
+    <ul>
+      <li>บอร์ดผู้บริหาร <b>เห็นสถานะเวรทั้ง 10 สถานีสด</b> — ใครรับเวรแล้ว งานค้าง เหตุการณ์ ครบในจอเดียว</li>
+      <li class="t">ปุ่ม <b>"ดึงค่าสด"</b> เติมค่าจาก SCADA เข้าสมุดเวรอัตโนมัติ (เครื่องสูบ/ระดับถัง/แรงดัน/อัตราจ่าย)</li>
+      <li class="a">ปุ่ม <b>"พิมพ์บันทึกเวร"</b> สร้างใบส่ง–รับเวรทั้งระบบ พร้อมพิมพ์หรือบันทึก <b>PDF</b> ได้ทันทีทุกกะ</li>
+      <li>งานค้างที่ยังไม่ปิด <b>ยกยอดข้ามเวรอัตโนมัติ</b> — ไม่มีตกหล่น</li>
+    </ul>
+    <div class="foot"><span>Water Operation KM Dashboard</span><span>8 / 13</span></div>
+    <div class="note" data-note="จุดเด่นที่สี่ ใช้ได้จริงหน้างานทุกกะ คือโมดูลรับส่งเวรครับ ผู้บริหารเปิดบอร์ดเดียวเห็นสถานะเวรทั้ง 10 สถานีแบบสด ว่าสถานีไหนรับเวรแล้ว มีงานค้างอะไร เกิดเหตุการณ์อะไรบ้าง เจ้าหน้าที่ไม่ต้องพิมพ์ค่าเอง กดปุ่มดึงค่าสด ระบบเติมค่าจาก SCADA ให้อัตโนมัติ ทั้งจำนวนเครื่องสูบที่เดิน ระดับถัง แรงดัน และอัตราจ่าย และเมื่อจบกะ กดปุ่มเดียวพิมพ์ใบส่ง-รับเวรทั้งระบบ บันทึกเป็น PDF ได้เลย ที่สำคัญงานค้างที่ยังไม่ปิดจะถูกยกยอดไปเวรถัดไปอัตโนมัติ ไม่มีตกหล่นครับ"></div>
+  </section>
+
+  <!-- 9 -->
+  <section class="slide">
+    <div class="kicker">จุดเด่น 5 · ส่งต่อความรู้</div>
+    <h2>KM Library — คลังองค์ความรู้</h2>
+    <div class="grid g2">
+      <div class="tile"><h3>ความรู้จากงานจริง 42+ เรื่อง</h3><p>ปรัชญาระบบ · ไฮดรอลิกอุโมงค์ · SCADA/RTU/RCV · การจัดการวิกฤต จากบันทึกการเรียนรู้และ Playbook</p></div>
+      <div class="tile t"><h3>เพิ่ม/ค้นได้เอง</h3><p>เจ้าหน้าที่บันทึกความรู้ใหม่ กรองตามหมวด และส่งออกให้ผู้ดูแลรวมเข้าคลังกลางได้</p></div>
+    </div>
+    <p class="sub" style="margin-top:22px">เปลี่ยนความรู้ที่อยู่ "ในตัวคน" ให้เป็น <b>สินทรัพย์ขององค์กร</b> ที่ส่งต่อได้เมื่อเปลี่ยนกำลังพล</p>
+    <div class="foot"><span>Water Operation KM Dashboard</span><span>9 / 13</span></div>
+    <div class="note" data-note="จุดเด่นที่ห้าคือหัวใจของคำว่า KM ครับ คลังองค์ความรู้รวบรวมความรู้จากงานจริงกว่า 42 เรื่อง ทั้งปรัชญาการเดินระบบ ไฮดรอลิกของอุโมงค์ การทำงานของ SCADA RTU และวาล์ว RCV รวมถึงการจัดการภาวะวิกฤต ที่กลั่นมาจากบันทึกการเรียนรู้และ Playbook ของ กคจ. เจ้าหน้าที่เพิ่มความรู้ใหม่เองได้ ค้นและกรองตามหมวดได้ นี่คือการเปลี่ยนความรู้ที่อยู่ในตัวบุคคล ให้กลายเป็นสินทรัพย์ขององค์กรที่ส่งต่อได้ ไม่หายไปเมื่อมีการเปลี่ยนกำลังพลครับ"></div>
+  </section>
+
+  <!-- 10 -->
+  <section class="slide">
+    <div class="kicker">ความปลอดภัยข้อมูล</div>
+    <h2>ออกแบบให้ปลอดภัยตั้งแต่ต้น</h2>
+    <ul>
+      <li class="t">ค่าปฏิบัติการจริงจาก SCADA <b>แสดงเฉพาะเมื่ออยู่ในเครือข่าย MWA</b> เท่านั้น</li>
+      <li>เว็บเผยแพร่สาธารณะ <b>ไม่เก็บค่า SCADA จริงไว้ในไฟล์</b> — ภายนอกเห็นเพียงโครงหน้าและข้อมูลอ้างอิง</li>
+      <li class="a">ดึงค่าสดด้วยโค้ดฝั่งผู้ใช้ตอนเปิดหน้า — <b>ไม่มีการนำข้อมูลภายในออกสู่ภายนอก</b></li>
+      <li>สถานะ "ค่าสด / Snapshot" แสดงชัดทุกหน้า ป้องกันการเข้าใจค่าผิด</li>
+    </ul>
+    <div class="foot"><span>Water Operation KM Dashboard</span><span>10 / 13</span></div>
+    <div class="note" data-note="เรื่องความปลอดภัยข้อมูลเราให้ความสำคัญตั้งแต่ออกแบบครับ หลักการคือค่าปฏิบัติการจริงจาก SCADA จะแสดงเฉพาะเมื่อเปิดหน้าจากภายในเครือข่าย MWA เท่านั้น ตัวเว็บที่เผยแพร่สาธารณะไม่มีการเก็บค่า SCADA จริงไว้ในไฟล์เลย คนภายนอกเห็นเพียงโครงหน้าและข้อมูลอ้างอิงทั่วไป การดึงค่าสดทำด้วยโค้ดฝั่งผู้ใช้ตอนเปิดหน้า ไม่มีการส่งข้อมูลภายในออกไปไหน และทุกหน้ามีป้ายบอกชัดว่าเป็นค่าสดหรือ Snapshot ป้องกันการนำค่าไปใช้ผิดครับ"></div>
+  </section>
+
+  <!-- 11 -->
+  <section class="slide">
+    <div class="kicker">เชิงเทคนิค</div>
+    <h2>เบา ยืดหยุ่น พร้อมใช้</h2>
+    <div class="grid g3">
+      <div class="tile"><h3>ไฟล์เดียว</h3><p>ทั้งเว็บอยู่ในไฟล์เดียว ไม่ต้องติดตั้งเซิร์ฟเวอร์หรือฐานข้อมูล</p></div>
+      <div class="tile t"><h3>ทุกอุปกรณ์</h3><p>คอมพิวเตอร์ แท็บเล็ต มือถือ · โหมดมืด/สว่าง · ซ่อนเมนูได้</p></div>
+      <div class="tile a"><h3>วางที่ไหนก็ได้</h3><p>GitHub Pages สำหรับความรู้ หรือวางในอินทราเน็ตเพื่อค่าสดเต็มรูปแบบ</p></div>
+      <div class="tile"><h3>อัปเดตง่าย</h3><p>แก้แล้วเผยแพร่ทันทีใน 1–2 นาที มีประวัติการเปลี่ยนแปลง</p></div>
+      <div class="tile t"><h3>เชื่อม SCADA</h3><p>ใช้ endpoint เดียวกับจอจริง ไม่กระทบระบบเดิม</p></div>
+      <div class="tile"><h3>รับส่งเวรข้ามเครื่อง</h3><p>โหมดสาธิตในเครื่อง หรือเชื่อม Firebase ให้ทุกที่เห็นพร้อมกัน</p></div>
+    </div>
+    <div class="foot"><span>Water Operation KM Dashboard</span><span>11 / 13</span></div>
+    <div class="note" data-note="ในเชิงเทคนิค ระบบออกแบบให้เบาและยืดหยุ่นครับ ทั้งเว็บอยู่ในไฟล์เดียว ไม่ต้องติดตั้งเซิร์ฟเวอร์หรือฐานข้อมูล เปิดได้ทุกอุปกรณ์ มีโหมดมืดสว่าง ซ่อนเมนูได้ วางไว้บน GitHub Pages สำหรับส่วนความรู้ หรือวางในอินทราเน็ตเพื่อให้ได้ค่าสดเต็มรูปแบบ การอัปเดตทำได้เร็วมาก แก้แล้วเผยแพร่ภายใน 1-2 นาที การเชื่อม SCADA ใช้ endpoint เดียวกับจอจริงจึงไม่กระทบระบบเดิม และการรับส่งเวรเชื่อม Firebase ให้ทุกเครื่องเห็นพร้อมกันได้ครับ"></div>
+  </section>
+
+  <!-- 12 -->
+  <section class="slide">
+    <div class="kicker">ก้าวต่อไป</div>
+    <h2>โรดแมป</h2>
+    <ul>
+      <li class="c">ระบบ <b>แจ้งเตือนอัตโนมัติ (Alert)</b> — ถังต่ำวิกฤต/ใกล้ล้น หรือจ่ายออกมากกว่ารับเข้า เด้งเตือนทันที</li>
+      <li class="a">กราฟย้อนหลังแบบเบา (sparkline) ระดับถัง 24 ชม. ในการ์ดสถานี</li>
+      <li class="t">เชื่อม <b>MQTT</b> รับแจ้งเตือน RTU และ Acknowledge จากในเว็บ</li>
+      <li>วางระบบใน <b>อินทราเน็ต/เซิร์ฟเวอร์ Smart Map</b> เพื่อใช้ค่าสดเต็มรูปแบบทุกที่</li>
+      <li>ยืนยันข้อมูลบางส่วนกับ กคจ. (sourceSystem, เส้นทางจ่ายน้ำ, ทิศทางการไหลล่าสุด)</li>
+    </ul>
+    <div class="foot"><span>Water Operation KM Dashboard</span><span>12 / 13</span></div>
+    <div class="note" data-note="สำหรับก้าวต่อไปครับ เรื่องที่ให้คุณค่าสูงสุดคือระบบแจ้งเตือนอัตโนมัติ เพราะตอนนี้เรามีค่าสดแล้ว จึงต่อยอดให้ระบบเด้งเตือนเองเมื่อถังต่ำวิกฤต ใกล้ล้น หรือจ่ายออกมากกว่ารับเข้า ต่อมาคือกราฟย้อนหลังแบบเบาในการ์ดสถานี การเชื่อม MQTT เพื่อรับแจ้งเตือน RTU และกดรับทราบจากในเว็บ การนำระบบไปวางในอินทราเน็ตหรือเซิร์ฟเวอร์ Smart Map เพื่อให้ใช้ค่าสดได้เต็มรูปแบบทุกที่ และสุดท้ายคือการยืนยันข้อมูลบางส่วนกับ กคจ. ให้เป็นทางการ ทั้งหมดนี้พร้อมพัฒนาต่อตามที่ท่านเห็นควรครับ"></div>
+  </section>
+
+  <!-- 13 -->
+  <section class="slide cover">
+    <div class="kicker">สรุป</div>
+    <h1>จอเดียว<br>เห็นทั้งระบบ</h1>
+    <p class="sub">รวมความรู้ · เห็นค่าสด · เฝ้าระวัง · รับส่งเวร — พร้อมใช้จริงและต่อยอดได้<br><br>
+      🔗 tigerswp818-star.github.io/water-km-dashboard</p>
+    <div class="foot"><span>ขอบคุณครับ — ยินดีรับข้อเสนอแนะ</span><span>13 / 13</span></div>
+    <div class="note" data-note="สรุปครับ Water Operation KM Dashboard คือจอเดียวที่รวมทุกอย่าง ทั้งองค์ความรู้ ค่าปฏิบัติการแบบสด การเฝ้าระวัง และการรับส่งเวร เป็นเครื่องมือที่พร้อมใช้จริงแล้ววันนี้ และออกแบบให้ต่อยอดได้อีกมาก ต้องขอบคุณท่านผู้บริหารและทุกท่านที่ให้เวลารับฟัง ยินดีรับข้อเสนอแนะเพื่อพัฒนาต่อครับ ขอบคุณครับ"></div>
+  </section>
+
+</div>
+
+<div id="hud">
+  <button id="btn-note" title="สลับสคริปต์การพูด (N)">🎤 สคริปต์</button>
+  <button id="btn-full" title="เต็มจอ (F)">⛶ เต็มจอ</button>
+  <button id="btn-print" title="พิมพ์/บันทึก PDF (P)">🖨 PDF</button>
+</div>
+<div id="count"></div>
+<div id="nav">
+  <button class="cbtn" id="prev">◀</button>
+  <button class="cbtn" id="next">▶</button>
+</div>
+<div class="hint">◀ ▶ เปลี่ยนสไลด์ · N ดูสคริปต์ · F เต็มจอ · P พิมพ์เป็น PDF</div>
+<div id="note"><h4>🎤 สคริปต์การพูด</h4><div id="note-body"></div></div>
+
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll(".slide"));
+  var i=0, noteOn=false;
+  var noteBox=document.getElementById("note"), noteBody=document.getElementById("note-body"), count=document.getElementById("count");
+  function show(n){
+    i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach(function(s,k){s.classList.toggle("on",k===i);});
+    count.textContent=(i+1)+" / "+slides.length;
+    var nd=slides[i].querySelector(".note");
+    noteBody.textContent=nd?nd.getAttribute("data-note"):"";
+  }
+  function next(){show(i+1);} function prev(){show(i-1);}
+  function toggleNote(){noteOn=!noteOn;noteBox.classList.toggle("on",noteOn);}
+  function full(){ if(!document.fullscreenElement){document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();} else {document.exitFullscreen&&document.exitFullscreen();} }
+  document.getElementById("next").onclick=next;
+  document.getElementById("prev").onclick=prev;
+  document.getElementById("btn-note").onclick=toggleNote;
+  document.getElementById("btn-full").onclick=full;
+  document.getElementById("btn-print").onclick=function(){window.print();};
+  document.addEventListener("keydown",function(e){
+    if(e.key==="ArrowRight"||e.key===" "||e.key==="PageDown"){e.preventDefault();next();}
+    else if(e.key==="ArrowLeft"||e.key==="PageUp"){e.preventDefault();prev();}
+    else if(e.key==="n"||e.key==="N"){toggleNote();}
+    else if(e.key==="f"||e.key==="F"){full();}
+    else if(e.key==="p"||e.key==="P"){e.preventDefault();window.print();}
+    else if(e.key==="Home"){show(0);} else if(e.key==="End"){show(slides.length-1);}
+  });
+  var sx=null;
+  document.addEventListener("touchstart",function(e){sx=e.touches[0].clientX;},{passive:true});
+  document.addEventListener("touchend",function(e){ if(sx==null)return; var dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>50){dx<0?next():prev();} sx=null;},{passive:true});
+  show(0);
+})();
+</script>
+</body>
+</html>
